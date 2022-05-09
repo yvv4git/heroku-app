@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>User movies recomendation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/main.css') }}">
+</head>
+
+<form action="{{ url_for('main') }}" method="POST">
+    <fieldset>
+        <legend>Top movies suitable for the user:</legend>
+        User id:
+        <input name="user_id" type="number" required>
+        <br>
+        <br>
+        <input type="submit" value="Request">
+    </fieldset>
+</form>
+
+<div class="result" align="center">
+    {% if result %}
+    	<br> <p style="font-size:20px">Recommended movies:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Film</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for film in result %}
+                    <tr>
+                        <td>{{ film }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+</div>
+
+</html>
