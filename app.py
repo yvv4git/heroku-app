@@ -3,7 +3,6 @@ import flask
 from flask import render_template
 import pickle
 import pandas as pd
-from sklearn.utils import resample
 
 
 i_cols = ['movie id', 'movie title', 'release date', 'video release date', 'IMDb URL', 'unknown', 'Action', 'Adventure',
