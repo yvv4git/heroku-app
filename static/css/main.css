@@ -1,0 +1,24 @@
+body {
+    background-color: burlywood;
+}
+
+form {
+    margin: auto;
+    width: 50%;
+    border: 1px solid green;
+}
+
+.result {
+    margin: auto;
+    width: 50%;
+    border: 1px solid green;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td,
+th {
+    border: 2px solid rgb(67, 201, 27);
+}
